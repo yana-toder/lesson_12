@@ -1,0 +1,248 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+}
+
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+}
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+
+.header {
+	background: #B2B2B2;
+	padding: 20px;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.block div{
+	width: 300px;
+	height: 300px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 20px;
+	transition: all 0.8s ease 0s;
+	padding-top: 40px;
+	margin-bottom: 20px;
+}
+.block__title {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.block__translate {
+	background: #eb4034;
+}
+.block__translate:hover {
+	background: #B3FFAE;
+	transform: translate(35px, 40px);
+}
+
+.block__scale {
+	background: #F8C4B4;
+}
+.block__scale:hover {
+	background: #FF8787;
+	transform: scale(1, -1);
+}
+
+.block__rotate {
+	background: #FCE700;
+}
+.block__rotate:hover {
+	background: #EA047E;
+	transform: rotate(-56deg);
+}
+
+.block__skew{
+	background: #4649FF;
+}
+.block__skew:hover{
+	background: #C47AFF;
+	transform: skew(24deg, 40deg);
+}
+
+.block__perspective{
+	background: #FF731D;
+}
+.block__perspective:hover{
+	perspective-origin: center;
+	transform: perspective(400px) rotateX(45deg);
+	background: #FFD372;
+}
+
+.block__translate3d{
+	background: #674747;
+}
+.block__translate3d:hover{
+	background: #829460;
+	transform: perspective(300px) translate3d(30px, 20px,60px);
+}
+
+.block__rotate3d {
+	background: #8758FF;
+}
+.block__rotate3d:hover {
+	background: #25316D;
+	transform: perspective(400px) rotate3d(-2, 2, 1, 35deg);
+}
+
+.block-transform div {
+	width: 300px;
+	height: 300px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 20px;
+	transition: all 0.8s ease 0s;
+	padding-top: 40px;
+	margin-bottom: 20px;
+	position: relative;
+	perspective: 400px;
+	transform-style: preserve-3d;
+}
+.block-transform__style {
+	width: 300px;
+	height: 300px;
+	background: #A77979;
+}
+.block-transform__style:hover {
+	background: #42855B;
+	transform: rotateY(50deg);
+}
+
+.block-flip {
+	display: inline-block;
+	margin-bottom: 50px;
+}
+.block-flip__body {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 20px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.block-flip__front,
+.block-flip__back {
+	color: #fff;
+	border-radius: 20px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.block-flip__front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background-color: #AC4425;
+	backface-visibility: hidden;
+}
+
+.block-flip__back {
+	transform: rotateY(-180deg);
+	background-color: #224B0C;
+}
+
+.block-flip:hover .block-flip__body {
+	transform: rotateY(-180deg);
+}
+
+/*icon*/
+
+.main {
+	margin-top: 100px;
+	width: 800px;
+	height: 400px;
+	background: url('../img/bg.jpg') 0 0/cover;
+}
+.main__wrapper {
+	position: absolute;
+	bottom: 197px;
+}
+
+.icon {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin: 2px;
+	animation: animate 3s alternate infinite;
+}
+
+@keyframes animate {
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(-30px);
+	}
+	100%{
+		transform: translateY(0px)
+	}
+}
+
+.icon:nth-child(1) {
+	animation-delay: .2s;
+}
+.icon:nth-child(2) {
+	animation-delay: .4s;
+}
+.icon:nth-child(3) {
+	animation-delay: .6s;
+}
+.icon:nth-child(4) {
+	animation-delay: .8s;
+}
+.icon:nth-child(5) {
+	animation-delay: .1s;
+}
+.icon:nth-child(6) {
+	animation-delay: 1.2s;
+}
+.icon:nth-child(7) {
+	animation-delay: 1.4s;
+}
+
+.main__icon1 {
+	background: url('../img/pumpkin1.svg');
+}
+.main__icon2 {
+	background: url('../img/pumpkin2svg.svg');
+}
+.main__icon3 {
+	background: url('../img/pumpkin3.svg');
+}
+.main__icon4 {
+	background: url('../img/pumpkin4.svg');
+}
+.main__icon5 {
+	background: url('../img/pumpkin5.svg');
+}
+.main__icon6 {
+	background: url('../img/pumpkin6.svg');
+}
+.main__icon7 {
+	background: url('../img/pumpkin7.svg');
+}
+
+.footer {
+	height: 200px;
+	background: rgb(134, 128, 128);
+}
+
